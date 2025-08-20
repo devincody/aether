@@ -7,6 +7,7 @@ dropCap: true
 displayInMenu: false
 displayInList: true
 draft: false
+math: true
 resources:
 - name: featuredImage
   src: "mdd-iphone.jpg"
