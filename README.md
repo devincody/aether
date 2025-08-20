@@ -1,5 +1,9 @@
 # aether
+
 Aether is a Hugo theme for blogs that emphasizes motion, depth, and material as design elements.  Aether presents your content in a clean interface that highlights good photography and writing.
+
+## Why Fork?
+I forked the [aether theme repository](https://github.com/josephhutch/aether) by josephhutch because I liked the original theme a lot, but over the years, it changed quite a bit. This is a rollback to the theme that I was/am most interested in. In addition to a rollback, I've also updated the theme to use MathJAX instead of Katex, which seems to render more seamlessly.
 
 ## Features
  - It's **Fast**! PageSpeed scores consistently between 94-100
@@ -12,13 +16,13 @@ Aether is a Hugo theme for blogs that emphasizes motion, depth, and material as 
  - Add **math symbols and equations** to your blog posts using LaTeX
  - **Google Analytics** and **Disqus** integration
 
-![Aether Hugo theme screenshot](https://raw.githubusercontent.com/josephhutch/aether/master/images/screenshot.png?_sm_au_=iVVVRRW7D405F0fN)
+![Aether Hugo theme screenshot](https://raw.githubusercontent.com/devincody/aether/master/images/screenshot.png?_sm_au_=iVVVRRW7D405F0fN)
 
 ## Installation
 In the root directory of your Hugo Project, clone the aether repo into the themes directory.
 
 ```shell session
-git clone https://github.com/josephhutch/aether.git themes/aether
+git clone https://github.com/devincody/aether.git themes/aether
 ```
 
 ## Usage
@@ -96,13 +100,7 @@ Posts are written in markdown. You can find how to write in markdown from this [
 #### Shortcodes
 Shortcodes extend markdown to make writing easier and more powerful.
 
-`raw` allows for adding content that Hugo will pass through unmodified. Raw is useful for adding html to your content or **adding math equations in LaTeX**.
-
-```html
-{{< raw >}}
-\[ S(x) = \frac{1}{1+e^{-x}} \]
-{{< /raw >}}
-```
+`raw` allows for adding content that Hugo will pass through unmodified. Raw is useful for adding html to your content.
 
 `image` is how you add WebP images to your posts with a fallback in case WebP is not supported. Image just needs the src and alt parameters. WebP is a next-gen image format that was created to make the web fast. To use the image shortcode simply store a WebP image with the same name in the same directory as your normal image.
 
@@ -129,6 +127,17 @@ description: "This is the subtext above the main heading in small letters"
 ---
 ```
 
+## Hugo Suggested Commands
+
+To build the example site:
+
+```
+cd exampleSite
+hugo server -D -t ../../
+```
+
+Additonal note: I'm currenlty using a particularly old version of Hugo (v0.68.3) since parts of this theme are broken in newer versions. I will update this note if I get around to modernizing the theme.
+
 ## Helpful Links
 [Aether Blog Post](https://www.joehutch.com/post/aether-theme/) - See aether in action and learn more about the theme
 
@@ -142,4 +151,6 @@ description: "This is the subtext above the main heading in small letters"
 Aether is actively maintained and I welcome you to help make it better! Contributions in the way of new features, documentation improvements, bug fixes, and feature requests are appreciated. Please make an individual pull-request/issue for each suggestion.
 
 ## License
+MIT © Devin Cody
+
 MIT © Joe Hutchinson
